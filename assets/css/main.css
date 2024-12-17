@@ -1,0 +1,74 @@
+@font-face{
+  font-family: "font-violet";
+  src: url('../font/NotoSansSC-Regular.ttf');
+  src: url('../font/Spacewar.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    cursor: default;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    cursor: default;
+  }
+  .font-violet{
+    font-family: "font-violet";
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+.custom-underline:hover{
+  text-decoration-thickness:2px;
+}
+.dark{
+  background-color: #18181B;
+}
+html.light .my-icon {
+  filter: invert(0); /* رنگ سیاه (معمولی) */
+}
+
+/* حالت دارک مود */
+html.dark .my-icon {
+  filter: invert(1); /* رنگ سفید (دارک مود) */
+}
+.colored-svg {
+  filter: invert(29%) sepia(87%) saturate(493%) hue-rotate(222deg) brightness(94%) contrast(101%);
+}
+::-webkit-scrollbar {
+  width: 10px; /* عرض اسکرول بار */
+  height: 12px; /* ارتفاع اسکرول بار برای اسکرول افقی */
+}
+
+/* ظاهر دستگیره (thumb) اسکرول بار */
+::-webkit-scrollbar-thumb {
+  background-color: #8b5cf6; /* رنگ پس‌زمینه دستگیره */
+  border-radius: 8px; /* گوشه‌های گرد */
+  border: 3px solid #8b5cf6; /* حاشیه اطراف دستگیره */
+}
+
+/* ظاهر نوار اسکرول (track) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* رنگ پس‌زمینه نوار اسکرول */
+  border-radius: 8px; /* گوشه‌های گرد */
+}
+
+/* برای اسکرول افقی (optional) */
+::-webkit-scrollbar-horizontal {
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #6b42f4; /* تغییر رنگ در حالت فعال */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #7d49d0; /* تغییر رنگ در حالت هاور */
+}
