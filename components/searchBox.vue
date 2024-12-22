@@ -1,34 +1,36 @@
 <template>
-<div class="flex gap-5">
-    <input type="search" class="p-1 appearance-none outline-none  w-11/12 border-2 bg-gray-50 border-gray-200 rounded-md focus:border-violet-400">
-    <div class="relative">
-        <div class="relative min-w-[200px]">
-  <label for="slct" class="block mb-2 text-gray-700">Select option</label>
-  <select id="slct" required class="appearance-none w-full py-2 pl-3 pr-10 border border-[#E8EAED] rounded-lg bg-white shadow-[0_1px_3px_-2px_#9098A9] cursor-pointer text-base font-normal focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:ring-2 hover:ring-blue-500 hover:border-blue-500">
-    <option value="" disabled selected class="hidden">Select option</option>
-    <option value="#">One</option>
-    <option value="#">Two</option>
-    <option value="#">Three</option>
-    <option value="#">Four</option>
-    <option value="#">Five</option>
-    <option value="#">Six</option>
-    <option value="#">Seven</option>
-  </select>
-  <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 w-[10px] h-[6px] stroke-[2px] stroke-[#9098A9] fill-none stroke-linecap-round stroke-linejoin-round pointer-events-none">
-    <use xlink:href="#select-arrow-down"></use>
-  </svg>
-</div>
-
-<!-- SVG Sprites -->
-<svg class="sprites" style="position: absolute; width: 0; height: 0; pointer-events: none; user-select: none;">
-  <symbol id="select-arrow-down" viewBox="0 0 10 6">
-    <polyline points="1 1 5 5 9 1"></polyline>
-  </symbol>
-</svg>
-
-</div>
-
-</div>
+  <div>
+    <form action="">
+      <div class="relative w-full flex items-center gap-2">
+        <input v-model="search" type="search"
+          class="focus:outline-violet-400 transition-all duration-150  ease-in py-2 appearance-none outline-none w-2/3 md:w-[80%] lg:w-[87%] border focus:border-none bg-gray-100 dark:bg-zinc-800 dark:border-zinc-600 border-gray-300 rounded-md dark:focus:border-violet-400 focus:border-violet-400 px-4 md:px-16"
+          placeholder="full Text Search" />
+        <NuxtImg class="my-icon absolute left-4 top-[30%]" src="/images/searchicon.svg" width="20" height="20">
+        </NuxtImg>
+        <select
+          class=" focus:outline-8 dark:focus:border-violet-400 focus:border-violet-400 text-sm w-1/3  md:w-[20%] lg:w-[13%] items-center border bg-gray-100 border-gray-300 p-3 rounded-lg dark:bg-zinc-800 dark:border-zinc-600">
+          <option value="1">short By date</option>
+          <option value="2">short By view</option>
+        </select>
+      </div>
+    </form>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-5">
+      <NuxtLink :to="`/users/${user.id}`" v-for="user in filteredItems" :key="user.id"
+        class="col-span-1 hover:outline hover:outline-violet-400  border border-stone-300 dark:border-stone-600 p-5 rounded-md">
+        <h3 class="font-bold text-xl"><span class="text-cyan-600">name:</span>{{ user.name }}</h3>
+        <p><span class="font-bold text-orange-600">email:</span>{{ user.email }}</p>
+      </NuxtLink>
+    </div>
+  </div>
 </template>
 <script setup>
+const { data: users } = await useFetch(() => 'https://jsonplaceholder.typicode.com/users')
+const search = ref('')
+const filteredItems = computed(() => {
+  if (!users.value) return []
+  return users.value.filter(user => 
+    user.name.toLowerCase().includes(search.value.toLowerCase())
+  )
+})
+
 </script>

@@ -1,7 +1,7 @@
 <template>
    <div>
       <div
-         class="mt-8 md:mt-32 lg:mt-44 xl:mt-40 mx-auto w-[94%] lg:w-[78%] xl:w-[63%] border border-gray-300 dark:border-stone-700 rounded-md  hover:outline-purple-400  dark:hover:outline-purple-400 hover:outline hover:outline-4 transition-all duration-75">
+         class="mt-20 md:mt-32 lg:mt-44 xl:mt-40 mx-auto w-[94%] lg:w-[78%] xl:w-[63%] border border-gray-300 dark:border-stone-700 rounded-md  hover:outline-purple-400  dark:hover:outline-purple-400 hover:outline hover:outline-4 transition-all duration-75">
          <div class="grid grid-cols-2 md:p-8 p-2">
             <div class="col-span-2 md:col-span-1  order-2 md:order-1 place-items-start mt-5 md:mt-0">
                <div class="flex flex-col text-start">

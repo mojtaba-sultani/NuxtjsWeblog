@@ -15,7 +15,7 @@
                 
                 <!---------------------------- Dynamic Routes --------------------------------->
                 <NuxtLink :to="`/posts/${post.id}`" v-else v-for="post in posts" :key="post.id"
-                    class="lg:col-span-1 border border-gray-200 dark:border-stone-700 hover:outline-purple-400  dark:hover:outline-purple-400 hover:outline hover:outline-4 transition-all duration-75 py-5 px-4 rounded-md mt-3">
+                    class=" lg:col-span-1 border border-gray-200 dark:border-stone-700 hover:outline-purple-400  dark:hover:outline-purple-400 hover:outline hover:outline-4 transition-all duration-75 py-5 px-4 rounded-md mt-3">
                     <h4 class="font-bold text-red-500">id:{{ post.id }}</h4>
                     <h4 class="font-semibold text-justify"><span class="text-violet-500 font-bold">title:</span> {{
                         post.title }}</h4>

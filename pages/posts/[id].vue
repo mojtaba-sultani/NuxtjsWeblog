@@ -1,6 +1,6 @@
 <template>
 <div v-if="card" class="container h-screen flex items-center">
-    <div class="text-center w-2/3 border border-gray-200 dark:border-gray-700 mx-auto p-5 h-[300px] rounded-md">
+    <div class="text-center md:w-2/3 border border-gray-200 dark:border-gray-700 mx-auto p-5 h-[300px] rounded-md">
         <span class="text-red-500 font-bold text-2xl">id:{{ card.id }}</span>
     <h1 class="font-bold my-10 "><span class="text-emerald-500  font-bold text-xl me-1">title:</span>{{ card.title }}</h1>
     <p class=" text-gray-500"><span class="text-cyan-400 font-bold me-1">body:</span>{{ card.body }}</p>

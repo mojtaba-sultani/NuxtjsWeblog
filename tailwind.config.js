@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [],
-  darkMode: 'class', // فعال‌سازی حالت دارک با کلاس
+  darkMode: 'class',
   theme: {
     extend: {
       container:{
@@ -20,4 +20,3 @@ export default {
   },
   plugins: [],
 }
-
