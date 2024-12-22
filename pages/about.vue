@@ -150,7 +150,7 @@
                                 class="absolute w-full h-0.5 bottom-0 end-0 bg-transparent group-hover:bg-violet-400 transition-colors duration-300"></span>
                             </button>
 
-                            <!-- Tooltip -->
+                            <!-- Tooltip --->
                             <div
                                 class="absolute bottom-full hidden w-max px-3 py-2 text-sm text-white bg-black border border-gray-700 rounded shadow-lg group-hover:block group-focus-within:block">
                                 <NuxtLink to="/" class="text-violet-400  hover:text-violet-500">
