@@ -21,7 +21,7 @@
                                 <NuxtLink class="font-bold hover:text-violet-400" to="/about">about</NuxtLink>
                             </li>
                             <li>
-                                <NuxtLink class="font-bold hover:text-violet-400" to="">friend</NuxtLink>
+                                <NuxtLink class="font-bold hover:text-violet-400" to="/friend">friend</NuxtLink>
                             </li>
                         </ul>
                     </div>
@@ -87,7 +87,7 @@
                                 </NuxtLink>
                             </li>
                             <li class="mr-5">
-                                <NuxtLink @click="toggleHiddenMenu" class="font-bold hover:text-violet-400" to="">friend
+                                <NuxtLink @click="toggleHiddenMenu" class="font-bold hover:text-violet-400" to="/friend">friend
                                 </NuxtLink>
                             </li>
                             <div class="flex justify-end mr-5">
